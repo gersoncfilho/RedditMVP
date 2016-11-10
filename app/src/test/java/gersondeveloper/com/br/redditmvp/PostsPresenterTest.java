@@ -2,8 +2,12 @@ package gersondeveloper.com.br.redditmvp;
 
 import com.google.common.collect.Lists;
 
+import org.junit.Before;
 import org.junit.Test;
+import org.mockito.ArgumentCaptor;
+import org.mockito.Captor;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,8 @@ import gersondeveloper.com.br.redditmvp.posts.PostsContract;
 
 public class PostsPresenterTest {
     private String teste_array[] = {"teste_1","teste_2"};
+
+
 
     private static List<Post> POSTS = Lists.newArrayList(new Post(
             true,
@@ -75,9 +81,24 @@ public class PostsPresenterTest {
     @Mock
     private PostsContract.View mPostsView;
 
-    @Test
-    public void clickOnFab_ShowsAddsPostsUi(){
+    @Captor
+    private ArgumentCaptor<PostsRepository.LoadPostsCallback> mLoadPostsCallbackCaptor;
 
+    private Posts
+
+    @Before
+    public void setupPostsPresenter()
+    {
+        //Mockitgo tem uma maneira muito conveniente de injetar mocks usando a anotação @Mock. Para injetar os mocks no teste, é preciso chamar o método initMocks()
+        MockitoAnnotations.initMocks(this);
+
+        //Pega uma referência para a classe sob teste
+
+    }
+
+    @Test
+    public void loadPostsFromRepositoryandLoadIntoView(){
+        mPostsRepository
     }
 
 }

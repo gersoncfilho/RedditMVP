@@ -11,6 +11,7 @@ import gersondeveloper.com.br.redditmvp.data.Post;
  */
 
 public interface PostsContract {
+
     interface View extends BaseView<Presenter> {
         void showPosts(List<Post> posts);
     }

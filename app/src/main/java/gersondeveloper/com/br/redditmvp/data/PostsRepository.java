@@ -12,7 +12,7 @@ public interface PostsRepository {
 
     interface LoadPostsCallback
     {
-        void onPostsLoades(List<Post> posts);
+        void onPostsLoaded(List<Post> posts);
     }
 
     interface GetPostCallback
